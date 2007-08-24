@@ -1,0 +1,19 @@
+DESCRIPTION="PostgreSQL C++ bindings"
+HOMEPAGE="http://pqxx.org/"
+SRC_URI="http://pqxx.org/download/software/${PN}/${P}.tar.gz"
+
+PKG_NAMES="${PN} ${PN}${PV//.} ${PN}-devel"
+PKG_HINTS="setup dll devel"
+PKG_CONTENTS[0]='usr/share/'
+PKG_CONTENTS[1]="usr/bin/cygpqxx-${PV//./-}.dll"
+PKG_CONTENTS[2]='usr/bin/pqxx-config usr/include/ usr/lib/'
+
+DIFF_EXCLUDES="win32"
+
+src_compile() {
+	cd ${S}
+	NOCONFIGURE=1 ./autogen.sh || error "autogen.sh failed"
+	cd ${B}
+	cygconf --disable-static
+	cygmake
+}

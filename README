@@ -1,0 +1,133 @@
+libpqxx
+------------------------------------------
+libpqxx is the official C++ client API for PostgreSQL, the 
+enterprise-strength open-source database software.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libpq4-8.0.7-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.3.5-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  gcc-g++-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://pqxx.org/
+
+Canonical download:
+  http://pqxx.org/download/software/libpqxx/
+
+-------------------------------------------
+
+Build instructions:
+  unpack libpqxx-2.6.9-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./libpqxx-2.6.9-X.cygport all
+
+This will create:
+  /usr/src/libpqxx-2.6.9-X-src.tar.bz2
+  /usr/src/libpqxx-2.6.9-X.tar.bz2
+  /usr/src/libpqxx-devel-2.6.9-X.tar.bz2
+  /usr/src/libpqxx269-2.6.9-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(libpqxx)
+  /usr/share/doc/Cygwin/libpqxx-2.6.9.README
+  /usr/share/doc/libpqxx-2.6.9/AUTHORS
+  /usr/share/doc/libpqxx-2.6.9/COPYING
+  /usr/share/doc/libpqxx-2.6.9/ChangeLog
+  /usr/share/doc/libpqxx-2.6.9/INSTALL
+  /usr/share/doc/libpqxx-2.6.9/NEWS
+  /usr/share/doc/libpqxx-2.6.9/README
+  /usr/share/doc/libpqxx-2.6.9/TODO
+
+(libpqxx269)
+  /usr/bin/cygpqxx-2-6-9.dll
+
+(libpqxx-devel)
+  /usr/bin/pqxx-config
+  /usr/include/pqxx/basic_connection
+  /usr/include/pqxx/basic_connection.hxx
+  /usr/include/pqxx/binarystring
+  /usr/include/pqxx/binarystring.hxx
+  /usr/include/pqxx/cachedresult.h
+  /usr/include/pqxx/compiler-internal-post.hxx
+  /usr/include/pqxx/compiler-internal-pre.hxx
+  /usr/include/pqxx/compiler-public.hxx
+  /usr/include/pqxx/config-public-compiler.h
+  /usr/include/pqxx/connection
+  /usr/include/pqxx/connection.hxx
+  /usr/include/pqxx/connection_base
+  /usr/include/pqxx/connection_base.hxx
+  /usr/include/pqxx/connectionpolicy
+  /usr/include/pqxx/connectionpolicy.hxx
+  /usr/include/pqxx/cursor
+  /usr/include/pqxx/cursor.h
+  /usr/include/pqxx/cursor.hxx
+  /usr/include/pqxx/dbtransaction
+  /usr/include/pqxx/dbtransaction.hxx
+  /usr/include/pqxx/except
+  /usr/include/pqxx/except.hxx
+  /usr/include/pqxx/isolation
+  /usr/include/pqxx/isolation.hxx
+  /usr/include/pqxx/largeobject
+  /usr/include/pqxx/largeobject.hxx
+  /usr/include/pqxx/libpq-forward.hxx
+  /usr/include/pqxx/nontransaction
+  /usr/include/pqxx/nontransaction.hxx
+  /usr/include/pqxx/pipeline
+  /usr/include/pqxx/pipeline.hxx
+  /usr/include/pqxx/pqxx
+  /usr/include/pqxx/prepared_statement
+  /usr/include/pqxx/prepared_statement.hxx
+  /usr/include/pqxx/result
+  /usr/include/pqxx/result.hxx
+  /usr/include/pqxx/robusttransaction
+  /usr/include/pqxx/robusttransaction.hxx
+  /usr/include/pqxx/subtransaction
+  /usr/include/pqxx/subtransaction.hxx
+  /usr/include/pqxx/tablereader
+  /usr/include/pqxx/tablereader.hxx
+  /usr/include/pqxx/tablestream
+  /usr/include/pqxx/tablestream.hxx
+  /usr/include/pqxx/tablewriter
+  /usr/include/pqxx/tablewriter.hxx
+  /usr/include/pqxx/transaction
+  /usr/include/pqxx/transaction.hxx
+  /usr/include/pqxx/transaction_base
+  /usr/include/pqxx/transaction_base.hxx
+  /usr/include/pqxx/transactor
+  /usr/include/pqxx/transactor.hxx
+  /usr/include/pqxx/trigger
+  /usr/include/pqxx/trigger.hxx
+  /usr/include/pqxx/util
+  /usr/include/pqxx/util.hxx
+  /usr/lib/libpqxx.dll.a
+  /usr/lib/libpqxx.la
+  /usr/lib/pkgconfig/libpqxx.pc
+
+------------------
+
+Port Notes:
+
+----- version 2.6.9-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

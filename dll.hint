@@ -1,0 +1,6 @@
+category: Database
+requires: cygwin libpq4
+external-source: libpqxx
+sdesc: "PostgreSQL C++ bindings (runtime)"
+ldesc: "libpqxx is the official C++ client API for PostgreSQL, the 
+enterprise-strength open-source database software."

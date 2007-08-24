@@ -1,0 +1,4 @@
+category: Database
+sdesc: "PostgreSQL C++ bindings (docs)"
+ldesc: "libpqxx is the official C++ client API for PostgreSQL, the 
+enterprise-strength open-source database software."
