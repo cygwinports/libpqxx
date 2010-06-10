@@ -1,0 +1,10 @@
+--- origsrc/libpqxx-3.1/src/Makefile.am	2010-02-15 17:21:36.000000000 -0600
++++ src/libpqxx-3.1/src/Makefile.am	2010-06-10 13:46:24.594256900 -0500
+@@ -25,6 +25,7 @@ libpqxx_la_SOURCES = binarystring.cxx \
+ libpqxx_version = -release $(PQXX_ABI)
+ 
+ libpqxx_la_LDFLAGS = $(libpqxx_version) \
++	-no-undefined \
+ 	-rpath $(libdir) \
+ 	${POSTGRES_LIB}
+ 

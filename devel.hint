@@ -1,5 +1,5 @@
 category: Database
-requires: libpqxx269 libpq-devel
+requires: libpqxx3.1 libpq-devel libstdc++6-devel
 external-source: libpqxx
 sdesc: "PostgreSQL C++ bindings (development)"
 ldesc: "libpqxx is the official C++ client API for PostgreSQL, the 
