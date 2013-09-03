@@ -1,0 +1,26 @@
+NAME="libpqxx"
+VERSION=4.0.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="PostgreSQL C++ bindings"
+DESCRIPTION="libpqxx is the official C++ client API for PostgreSQL, the
+enterprise-strength open-source database software."
+HOMEPAGE="http://pqxx.org/"
+SRC_URI="http://pqxx.org/download/software/libpqxx/libpqxx-${VERSION}.tar.gz"
+PATCH_URI="3.1-no-undefined.patch"
+
+PKG_NAMES="libpqxx4.0 libpqxx-devel"
+libpqxx4_0_CONTENTS="usr/bin/cygpqxx-4-0.dll"
+libpqxx_devel_CONTENTS='usr/bin/pqxx-config usr/include/ usr/lib/ usr/share/doc/'
+
+DIFF_EXCLUDES="Makefile.in configure libtool.m4 ltmain.sh test win32"
+
+src_compile() {
+	cd ${S}
+	NOCONFIGURE=1 ./autogen.sh || error "autogen.sh failed"
+	cd ${B}
+	cygconf --enable-shared --disable-static
+	cygmake
+}
+
+KEEP_LA_FILES="none"
